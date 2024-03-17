@@ -1,6 +1,13 @@
 package utils
 
 type Pair struct {
-	x int
-	y int
+	X int
+	Y int
+}
+
+func (p *Pair) Add(other Pair) Pair {
+	return Pair{
+		X: p.X + other.X,
+		Y: p.Y + other.Y,
+	}
 }
